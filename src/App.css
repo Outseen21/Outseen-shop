@@ -1,0 +1,385 @@
+/* Pasek nawigacyjny */
+.App-navbar {
+  background-color: #20232a;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.App-navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.App-title-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.App-logo {
+  height: 50px;
+  margin-right: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.App-logo:hover {
+  transform: scale(1.1);
+}
+
+.App-title {
+  font-size: 1.8rem;
+  color: #61dafb;
+  font-weight: bold;
+  margin-right: 40px;
+}
+
+.App-title-link:hover .App-title {
+  color: #ffffff;
+}
+
+.App-nav {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin-left: auto;
+}
+
+.App-nav li {
+  display: inline;
+}
+
+.App-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.App-nav a:hover {
+  background-color: #61dafb;
+  color: #20232a;
+}
+
+/* Koszyk */
+.App-cart-icon {
+  position: relative;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.App-cart-icon img {
+  height: 40px;
+  background: transparent;
+  transition: opacity 0.3s ease;
+}
+
+.App-cart-icon:hover {
+  background-color: #61dafb;
+  border-color: #61dafb;
+}
+
+.App-cart-icon:hover img {
+  opacity: 0.8;
+}
+
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+}
+
+/* Koszyk rozwijany */
+.App-cart {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin: 20px;
+}
+
+.App-cart h3 {
+  margin-top: 0;
+}
+
+.App-cart ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.App-cart li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.App-cart li button {
+  background-color: #ff4d4f;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.App-cart li button:hover {
+  background-color: #ff7875;
+}
+
+/* Sekcja kodu rabatowego */
+.discount-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.discount-section input {
+  width: 60%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.apply-discount {
+  background-color: #61dafb;
+  border: none;
+  padding: 8px 12px;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.apply-discount:hover {
+  background-color: #21a1f1;
+}
+
+/* Komunikat błędu kodu rabatowego */
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Przycisk przejścia do płatności */
+.checkout-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.checkout-button:hover {
+  background-color: #45a049;
+}
+
+/* Produkty */
+.Products {
+  padding: 20px;
+  text-align: left;
+  max-width: 1200px; /* Ograniczenie szerokości dla listy produktów */
+  margin: auto; /* Wyśrodkowanie na stronie */
+}
+
+.product-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  flex: 1 1 calc(33.333% - 40px);
+  box-sizing: border-box;
+  margin: 10px;
+  display: flex;
+  flex-direction: column; /* Umożliwia wyrównanie elementów w pionie */
+  justify-content: space-between; /* Wyrównuje elementy na górze i dole */
+  height: auto;
+  min-height: 300px; /* Minimalna wysokość dla kart */
+}
+
+.product h3 {
+  margin-top: 0;
+  color: #282c34;
+}
+
+.product-description {
+  color: #444;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.add-to-cart {
+  background-color: #61dafb;
+  border: none;
+  padding: 10px 20px;
+  color: #20232a;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center; /* Wyśrodkowanie przycisku poziomo */
+  margin-top: auto; /* Sprawia, że przycisk zostaje wyrównany na dole karty */
+}
+
+.add-to-cart:hover {
+  background-color: #21a1f1;
+  color: white;
+}
+
+/* Strony O nas i Kontakt */
+.About, .Contact {
+  padding: 30px;
+  text-align: left;
+  max-width: 600px;
+  margin: auto;
+}
+
+.About h2, .Contact h2 {
+  color: #61dafb;
+  margin-bottom: 20px;
+}
+
+.About p, .Contact p {
+  line-height: 1.6;
+}
+
+/* Tło dla kategorii League of Legends w głównym widoku */
+.category-background {
+  background-size: cover;
+  background-position: center;
+  width: 500px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  margin: auto;
+}
+
+/* Styl kategorii */
+.category-item {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category-item:hover {
+  transform: scale(1.05);
+}
+
+/* Tło oferty w szczegółowej kategorii */
+.offer-background {
+  background-size: cover; /* Skalowanie tła tak, aby pokryło cały obszar */
+  background-position: top center; /* Wycentrowanie, aby uniknąć przycięcia głów */
+  width: 90%; /* Szerokość na 90% ekranu */
+  height: 300px; /* Wysokość, aby tło było wyraźne */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px; /* Zachowujemy zaokrąglone rogi */
+  margin: 20px auto; /* Wyśrodkowanie z marginesem na górze i dole */
+}
+
+.category-title {
+  font-size: 2rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Lista produktów */
+.product-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.add-to-cart-button {
+  background-color: #61dafb;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+  background-color: #21a1f1;
+}
+/* Styl dla przycisku Zapłać */
+button.pay-button {
+  background-color: #ff4d4f; /* Czerwony przycisk */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button.pay-button:hover {
+  background-color: #ff7875; /* Jaśniejszy czerwony na hover */
+}
+
+button.pay-button:disabled {
+  background-color: #cccccc; /* Kolor dla zablokowanego przycisku */
+  cursor: not-allowed;
+}
+
+/* Poprawa wyglądu przycisków w koszyku */
+button.add-to-cart, button.remove-from-cart {
+  background-color: #1890ff; /* Niebieski przycisk */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.add-to-cart:hover, button.remove-from-cart:hover {
+  background-color: #40a9ff; /* Jaśniejszy niebieski na hover */
+}
