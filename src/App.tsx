@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js'; // PayPal
-import StripePaymentForm from './StripePaymentForm'; // Stripe
+import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js'; 
+import StripePaymentForm from './StripePaymentForm'; 
 import logo from './outseen-shop-logo-7.png';
 import cartIcon from './cart-icon.png';
-import categoryBackground from './league-of-legends-logo2.png'; // Tło dla przycisku kategorii
-import offerBackground from './league-of-legends-logo.png'; // Tło dla ofert w szczegółowym widoku
+import categoryBackground from './league-of-legends-logo2.png'; 
+import offerBackground from './league-of-legends-logo.png'; 
 import './App.css';
 
 interface CartItem {
@@ -82,7 +82,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        {/* Pasek nawigacyjny */}
+        {}
         <nav className="App-navbar">
           <div className="App-navbar-left">
             <Link to="/" className="App-title-link">
@@ -107,7 +107,7 @@ function App() {
           </div>
         </nav>
 
-        {/* Koszyk */}
+        {}
         {cartVisible && (
           <div className="App-cart">
             <h3>Koszyk</h3>
@@ -154,12 +154,12 @@ function App() {
     style={{ layout: "vertical" }}
     createOrder={(data, actions) => {
       return actions.order.create({
-        intent: "CAPTURE", // Natychmiastowa płatność
+        intent: "CAPTURE", 
         purchase_units: [
           {
             amount: {
               currency_code: "PLN",
-              value: getTotalPrice().toFixed(2), // Łączna cena
+              value: getTotalPrice().toFixed(2), 
             },
           },
         ],
@@ -188,7 +188,7 @@ function App() {
           </div>
         )}
 
-        {/* Zawartość strony */}
+        {}
         <header className="App-header">
           <Routes>
             <Route path="/" element={<EmptyComponent />} />
@@ -203,7 +203,6 @@ function App() {
   );
 }
 
-// Komponent strony produktów
 function Products({ addToCart }: { addToCart: (product: string, price: number) => void }) {
   return (
     <div className="Products">
@@ -224,7 +223,7 @@ function Products({ addToCart }: { addToCart: (product: string, price: number) =
   );
 }
 
-// Komponent kategorii League of Legends
+
 function LeagueOfLegendsCategory({ addToCart }: { addToCart: (product: string, price: number) => void }) {
   return (
     <div className="league-of-legends-category">
@@ -241,17 +240,17 @@ function LeagueOfLegendsCategory({ addToCart }: { addToCart: (product: string, p
           {
             name: 'Skin za 975 RP',
             description: 'You can choose any 975 RP skin (should be on the store). Delivery time 8 days. EUNE/EUW.',
-            price: 20, // 20 PLN
+            price: 20, 
           },
           {
             name: 'Skin za 1350 RP',
             description: 'You can choose any 1350 RP skin (should be on the store). Delivery time 8 days. EUNE/EUW.',
-            price: 30, // 30 PLN
+            price: 30, 
           },
           {
             name: 'Skin za 1820 RP',
             description: 'You can choose any 1820 RP skin (should be on the store). Delivery time 8 days. EUNE/EUW.',
-            price: 50, // 50 PLN
+            price: 50, 
           },
         ].map((product, index) => (
           <Product
@@ -267,7 +266,7 @@ function LeagueOfLegendsCategory({ addToCart }: { addToCart: (product: string, p
   );
 }
 
-// Komponent produktu
+
 function Product({
   name,
   description,
@@ -291,7 +290,7 @@ function Product({
   );
 }
 
-// Komponenty podstron
+
 function About() {
   return (
     <div className="About">

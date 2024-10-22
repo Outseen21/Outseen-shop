@@ -1,4 +1,4 @@
-/* Pasek nawigacyjny */
+
 .App-navbar {
   background-color: #20232a;
   padding: 15px 30px;
@@ -67,7 +67,7 @@
   color: #20232a;
 }
 
-/* Koszyk */
+
 .App-cart-icon {
   position: relative;
   cursor: pointer;
@@ -103,7 +103,7 @@
   font-size: 0.9rem;
 }
 
-/* Koszyk rozwijany */
+
 .App-cart {
   position: fixed;
   bottom: 0;
@@ -146,7 +146,7 @@
   background-color: #ff7875;
 }
 
-/* Sekcja kodu rabatowego */
+
 .discount-section {
   display: flex;
   justify-content: space-between;
@@ -174,14 +174,14 @@
   background-color: #21a1f1;
 }
 
-/* Komunikat błędu kodu rabatowego */
+
 .error-message {
   color: red;
   font-size: 0.9rem;
   margin-top: 5px;
 }
 
-/* Przycisk przejścia do płatności */
+
 .checkout-button {
   background-color: #4caf50;
   color: white;
@@ -199,12 +199,12 @@
   background-color: #45a049;
 }
 
-/* Produkty */
+
 .Products {
   padding: 20px;
   text-align: left;
-  max-width: 1200px; /* Ograniczenie szerokości dla listy produktów */
-  margin: auto; /* Wyśrodkowanie na stronie */
+  max-width: 1200px; 
+  margin: auto; 
 }
 
 .product-list {
@@ -226,10 +226,10 @@
   box-sizing: border-box;
   margin: 10px;
   display: flex;
-  flex-direction: column; /* Umożliwia wyrównanie elementów w pionie */
-  justify-content: space-between; /* Wyrównuje elementy na górze i dole */
+  flex-direction: column;
+  justify-content: space-between; 
   height: auto;
-  min-height: 300px; /* Minimalna wysokość dla kart */
+  min-height: 300px; 
 }
 
 .product h3 {
@@ -253,8 +253,8 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  align-self: center; /* Wyśrodkowanie przycisku poziomo */
-  margin-top: auto; /* Sprawia, że przycisk zostaje wyrównany na dole karty */
+  align-self: center; 
+  margin-top: auto; 
 }
 
 .add-to-cart:hover {
@@ -262,7 +262,7 @@
   color: white;
 }
 
-/* Strony O nas i Kontakt */
+
 .About, .Contact {
   padding: 30px;
   text-align: left;
@@ -279,7 +279,7 @@
   line-height: 1.6;
 }
 
-/* Tło dla kategorii League of Legends w głównym widoku */
+
 .category-background {
   background-size: cover;
   background-position: center;
@@ -294,13 +294,12 @@
   margin: auto;
 }
 
-/* Styl kategorii */
+
 .category-item {
   text-decoration: none;
   color: inherit;
   transition: transform 0.3s ease;
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
@@ -308,17 +307,17 @@
   transform: scale(1.05);
 }
 
-/* Tło oferty w szczegółowej kategorii */
+
 .offer-background {
-  background-size: cover; /* Skalowanie tła tak, aby pokryło cały obszar */
-  background-position: top center; /* Wycentrowanie, aby uniknąć przycięcia głów */
-  width: 90%; /* Szerokość na 90% ekranu */
-  height: 300px; /* Wysokość, aby tło było wyraźne */
+  background-size: cover; 
+  background-position: top center; 
+  width: 90%; 
+  height: 300px; 
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px; /* Zachowujemy zaokrąglone rogi */
-  margin: 20px auto; /* Wyśrodkowanie z marginesem na górze i dole */
+  border-radius: 10px; 
+  margin: 20px auto; 
 }
 
 .category-title {
@@ -327,7 +326,7 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-/* Lista produktów */
+
 .product-list {
   display: flex;
   justify-content: center;
@@ -348,9 +347,9 @@
 .add-to-cart-button:hover {
   background-color: #21a1f1;
 }
-/* Styl dla przycisku Zapłać */
+
 button.pay-button {
-  background-color: #ff4d4f; /* Czerwony przycisk */
+  background-color: #ff4d4f; 
   color: white;
   border: none;
   padding: 10px 20px;
@@ -361,17 +360,16 @@ button.pay-button {
 }
 
 button.pay-button:hover {
-  background-color: #ff7875; /* Jaśniejszy czerwony na hover */
+  background-color: #ff7875; 
 }
 
 button.pay-button:disabled {
-  background-color: #cccccc; /* Kolor dla zablokowanego przycisku */
+  background-color: #cccccc; 
   cursor: not-allowed;
 }
 
-/* Poprawa wyglądu przycisków w koszyku */
 button.add-to-cart, button.remove-from-cart {
-  background-color: #1890ff; /* Niebieski przycisk */
+  background-color: #1890ff; 
   color: white;
   border: none;
   padding: 8px 16px;
@@ -381,5 +379,5 @@ button.add-to-cart, button.remove-from-cart {
 }
 
 button.add-to-cart:hover, button.remove-from-cart:hover {
-  background-color: #40a9ff; /* Jaśniejszy niebieski na hover */
+  background-color: #40a9ff; 
 }
