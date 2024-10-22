@@ -1,9 +1,9 @@
 import React from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
-import CheckoutForm from './CheckoutForm'; // Importowanie formularza płatności
+import CheckoutForm from './CheckoutForm'; 
 
-// Klucz publiczny Stripe
+
 const stripePromise = loadStripe('your_public_key_here');
 
 function StripePaymentForm() {

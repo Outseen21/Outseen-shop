@@ -8,12 +8,12 @@ function PayPalButton() {
         style={{ layout: "vertical" }}
         createOrder={(data, actions) => {
           return actions.order.create({
-            intent: "CAPTURE", // Dodajemy właściwość intent
+            intent: "CAPTURE", 
             purchase_units: [
               {
                 amount: {
-                  currency_code: "USD", // Waluta płatności
-                  value: "10.00", // Kwota do zapłaty
+                  currency_code: "USD", 
+                  value: "10.00", 
                 },
               },
             ],

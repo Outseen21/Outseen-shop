@@ -9,7 +9,7 @@ function CheckoutForm() {
     event.preventDefault();
 
     if (!stripe || !elements) {
-      return; // Stripe.js has not yet loaded.
+      return; 
     }
 
     const cardElement = elements.getElement(CardElement);
@@ -19,17 +19,17 @@ function CheckoutForm() {
       return;
     }
 
-    // Używamy createPaymentMethod, przekazując CardElement
+   
     const { error, paymentMethod } = await stripe.createPaymentMethod({
       type: 'card',
-      card: cardElement, // Poprawny element typu CardElement
+      card: cardElement, 
     });
 
     if (error) {
       console.error('[Error]', error);
     } else {
       console.log('[PaymentMethod]', paymentMethod);
-      // Tutaj przetwórz płatność na backendzie
+     
     }
   };
 
